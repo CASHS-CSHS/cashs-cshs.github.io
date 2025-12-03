@@ -1,0 +1,159 @@
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    width: 100%;
+    height: var(--header-height);
+
+    padding: 0 var(--header-item-side-padding);
+    gap: var(--header-item-side-padding);
+
+    background-color: var(--bg-col-1);
+    background-image: linear-gradient(to right, var(--line-col), var(--line-col));
+    background-size: 100% var(--line-thickness);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header > nav {
+    width: fit-content;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+header > nav > div {
+    width: fit-content;
+    height: 100%;
+}
+
+header > nav > div > a {
+    width: 100%;
+    height: 100%;
+    padding: 0 var(--header-item-side-padding);
+
+    /*text-transform: uppercase;*/
+    color: var(--txt-col-1);
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(to right, var(--col-1), var(--col-1));
+    background-size: 0% var(--line-thickness);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    transition: 0.35s ease;
+}
+header > nav > div > a:hover {
+    color: var(--txt-col-2);
+    background-size: 100% 2px;
+    cursor: pointer;
+    /*letter-spacing: 1.4px;*/
+}
+
+.current-page > a {
+    background-size: 40% var(--line-thickness);
+}
+
+
+#mobile-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    background: rgba(0, 0, 0, 0.70);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    z-index: 10;
+}
+#mobile-nav > div {
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#mobile-nav > div > a {
+    color: var(--txt-col-1);
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    text-decoration: none;
+
+    background-image: linear-gradient(to right, var(--txt-col-2), var(--txt-col-2));
+    background-size: 0% var(--line-thickness);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.35s ease;
+}
+#mobile-nav > div > a:hover {
+    color: var(--txt-col-2);
+    background-size: 100% 2px;
+    cursor: pointer;
+    /*letter-spacing: 1.4px;*/
+}
+#mobile-nav {
+    display: none;
+}
+
+#mobile-nav-btn {
+    position: fixed;
+    left: var(--header-item-side-padding);
+    top: 0;
+
+    height: var(--header-height);
+    width: calc(0.76 * var(--header-height));
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+
+    z-index: 11 !important;
+}
+#mobile-nav-btn:hover {
+    cursor: pointer;
+}
+#mobile-nav-btn > div {
+    width: 100%;
+    height: 6px;
+
+    border-radius: 3px;
+    background: var(--txt-col-1);
+}
+#mobile-nav-btn > div:nth-of-type(2) {
+    --percent-width-difference: 16%;
+    width: calc(100% - var(--percent-width-difference));
+    transition: 0.35s ease; /* used in javascript for translating center div on toggle */
+}
+#mobile-nav-btn {
+    display: none;
+}
+
+#mobile-nav-btn-header-padding {
+    display: none;
+}

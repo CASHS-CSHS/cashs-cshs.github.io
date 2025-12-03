@@ -1,0 +1,24 @@
+:root {
+    /* colors */
+    --bg-col-1: #18171c;
+    --txt-col-1: #ebeff2;
+    --txt-col-2: #cbd0d4;
+    --txt-col-3: #b3b9bd;
+    --link-col: #3292d1;
+    --link-col-visited: #9046e0;
+    --line-col: #383b3d;
+    --col-1: #62ccaa;
+    --col-2: #62aacc;
+
+    /* general */
+    --line-thickness: 2px;
+
+    /* body */
+    --body-side-padding: 12%;
+    --body-vertical-padding: 54px;
+
+
+    /* header */
+    --header-height: 84px;
+    --header-item-side-padding: 20px;
+}

@@ -1,0 +1,26 @@
+@media screen and (max-width: 800px) {
+    :root {
+        --body-side-padding: 4%;
+    }
+
+    main {
+        width: 98% !important;
+    }
+
+    header > nav {
+        display: none !important;
+    }
+    #mobile-nav-btn {
+        display: flex !important;
+    }
+    #mobile-nav-btn-header-padding {
+        display: flex !important;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    #mobile-nav {
+        display: none !important; /* ensure that the mobile nav cannot be open with no way to close it if the screen width increases */
+    }
+}
