@@ -10,6 +10,7 @@ const SiteHeader = class extends HTMLElement {
                 <div><a href="/">Home</a></div>
                 <div><a href="/events">Events</a></div>
                 <div><a href="/members">Members</a></div>
+                <div><a href="/gallery">Gallery</a></div>
             </nav>
             <div id="mobile-nav-btn">
                 <div></div>
@@ -22,6 +23,7 @@ const SiteHeader = class extends HTMLElement {
                     <div><a href="/">Home</a></div>
                     <div><a href="/events">Events</a></div>
                     <div><a href="/members">Members</a></div>
+                    <div><a href="/gallery">Gallery</a></div>
                 </nav>
                 <img src="/assets/img/logo.webp">
             </header>
@@ -42,6 +44,8 @@ const SiteHeader = class extends HTMLElement {
             nav.querySelector("div:nth-of-type(2)").classList.add("current-page");
         } else if (route.includes("/members")) {
             nav.querySelector("div:nth-of-type(3)").classList.add("current-page");
+        } else if (route.includes("/gallery")) {
+            nav.querySelector("div:nth-of-type(4)").classList.add("current-page");
         }
     }
 
